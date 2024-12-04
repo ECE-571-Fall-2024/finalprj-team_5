@@ -7,14 +7,14 @@
 module uart_rx
   #(parameter
     DATA_WIDTH = 8,
-    BAUD_RATE  = 19200,
-    CLK_FREQ   = 50000000,
-    CLOCK_DIVIDE = (CLK_FREQ/BAUD_RATE))
+    BAUD_RATE  = 9600,
+    CLK_FREQ   = 100_000_000,
+    PULSE_WIDTH = (CLK_FREQ/BAUD_RATE))
     (uart_if.rx  rxif,
     input logic clk,
-    input logic rst);
+    input logic rstn);
 
-    localparam LB_DATA_WIDTH = (DATA_WIDTH == 1) ? 1 : $clog2(DATA_WIDTH - 1), LB_CLOCK_WIDTH   = (CLOCK_DIVIDE == 1) ? 1 : $clog2(CLOCK_DIVIDE - 1);
+    localparam LB_DATA_WIDTH = $clog2(DATA_WIDTH), LB_PULSE_WIDTH   = $clog2(PULSE_WIDTH);
 
 typedef enum logic [4:0] {
 S0 = 5'b00000, S1 = 5'b00001, S2 = 5'b00010, S3 = 5'b00011, 
@@ -51,7 +51,7 @@ function logic high(input [4:0] val);
    logic       sig_r;
 
    always_ff @(posedge clk) begin
-      if(rst) begin
+      if(rstn) begin
 	sig_q <= {rxif.sig, sig_q[4:1]}; // Shift the signal queue
 	sig_r <= high(sig_q);       // Apply majority voting
 	scnt <= (scnt == 0) ? 1 : 0; end
@@ -68,11 +68,11 @@ states state;
 
    logic [DATA_WIDTH-1:0]   data_tmp_r;
    logic [LB_DATA_WIDTH:0]  dcnt;
-   logic [LB_CLOCK_WIDTH:0] clk_cnt;
+   logic [LB_PULSE_WIDTH:0] clk_cnt;
    logic                    rx_done;
 
    always_ff @(posedge clk) begin
-      if(!rst) begin
+      if(!rstn) begin
          state      <= STT_WAIT;
          data_tmp_r <= 0;
          dcnt   <= 0;
@@ -86,7 +86,7 @@ states state;
               end
               else begin
                  data_tmp_r <= {sig_r, data_tmp_r[DATA_WIDTH-1:1]};
-                 clk_cnt    <= CLOCK_DIVIDE;
+                 clk_cnt    <= PULSE_WIDTH;
 
                  if(dcnt == DATA_WIDTH - 1) begin
                     state <= STT_STOP;
@@ -108,7 +108,7 @@ states state;
 
            STT_WAIT: begin
               if(sig_r == 0) begin
-                 clk_cnt  <= (CLOCK_DIVIDE*1.5);
+                 clk_cnt  <= (PULSE_WIDTH*1.5);
                  dcnt <= 0;
                  state    <= STT_DATA;
               end
@@ -129,7 +129,7 @@ states state;
    logic                  valid_r;
 
    always_ff @(posedge clk) begin
-      if(!rst) begin
+      if(!rstn) begin
          data_r  <= 0;
          valid_r <= 0;
       end

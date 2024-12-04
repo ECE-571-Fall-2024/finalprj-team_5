@@ -1,6 +1,6 @@
 `timescale 1ns/1ns
 
-`include "..RTL/uart_if.sv"
+`include "uart_if.sv"
 
 module uart_tx_tb();
 	localparam DATA_WIDTH = 8;
@@ -17,7 +17,7 @@ initial begin
 	clk = 1'b0;
 end
 
-always_ff #(CLK_PERIOD / 2) begin
+always #(CLK_PERIOD / 2) begin
 	clk = ~ clk;
 end
 
@@ -34,7 +34,7 @@ int			  end_flag = 0;
 int			  index    = 0;
 
 initial begin
-	txif.sig    = 0;
+	txif.data    = 0;
 	txif.valid  = 0;
 	rstn        = 0;
 
@@ -42,11 +42,11 @@ initial begin
 	rstn = 1;
 
 	while(!end_flag) begin
-	  while(!ready) @(posedge clk);
+	  while(!txif.ready) @(posedge clk);
 	  txif.data  = data;
 	  txif.valid = 1;
 	
-	  while(ready) @(posedge clk);
+	  while(txif.ready) @(posedge clk);
 	  txif.valid = 0;
 	
 	  repeat(PULSE_WIDTH / 2) @(posedge clk);

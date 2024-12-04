@@ -5,11 +5,11 @@
 module uart( uart_if.rx   rxif,
     uart_if.tx   txif,
     input logic  clk,
-    input logic  rst);	
+    input logic  rstn);	
 	
 parameter DATA_WIDTH = 8, 
-    BAUD_RATE  = 19200,
-    CLK_FREQ   = 50000000, CLOCK_DIVIDE = (CLK_FREQ/BAUD_RATE);
+    BAUD_RATE  = 9600,
+    CLK_FREQ   = 100_000_000, PULSE_WIDTH = (CLK_FREQ/BAUD_RATE);
 
 uart_rx 
        #(CLK_FREQ,
@@ -18,7 +18,7 @@ uart_rx
       receiver
              (
               .clk(clk),
-	      .rst(rst),
+	      .rstn(rstn),
 	      .rxif(rxif)
              );
 
@@ -30,7 +30,7 @@ uart_tx
       transmitter			 
                (               
                 .clk(clk),
-		.rst(rst),
+		.rstn(rstn),
 		.txif(txif)		
                );
 

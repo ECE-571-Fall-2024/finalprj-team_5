@@ -1,10 +1,10 @@
 `timescale 1ns/1ns
 
-`include "..RTL/uart_if.sv"
+`include "uart_if.sv"
 
 module uart_rx_tb();
 	localparam DATA_WIDTH = 8;
-	localparam BAUD_RATE  = 9600;
+	localparam BAUD_RATE  = 19200;
 	localparam CLK_FREQ   = 100_000_000;
 
 	uart_if #(DATA_WIDTH) rxif();
@@ -17,7 +17,7 @@ initial begin
 	clk = 1'b0;
 end
 
-always_ff #(CLK_PERIOD / 2) begin
+always #(CLK_PERIOD / 2) begin
 	clk = ~ clk;
 end
 

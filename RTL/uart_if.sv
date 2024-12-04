@@ -3,10 +3,9 @@
 
 interface uart_if
   #(parameter
-    DATA_WIDTH = 8) (
-          
+    DATA_WIDTH = 8) (         
     input logic clk,          
-    input logic rst          
+    input logic rstn          
 );
 
    logic sig, valid, ready;

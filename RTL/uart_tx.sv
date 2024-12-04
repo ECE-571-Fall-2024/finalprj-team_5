@@ -17,8 +17,8 @@ module uart_tx
    (
     input  logic       clk,       // System clock input
     input  logic       rstn,      // Active-low reset input
-    input  uart_if.tx  txif       // UART interface signals
-   );
+     uart_if.tx  txif       // UART interface signals
+  );
 
    // Define state machine states
    typedef enum logic [1:0] { 
@@ -112,3 +112,4 @@ module uart_tx
    assign txif.ready = ready_r;
 
 endmodule
+
