@@ -1,6 +1,3 @@
-
-
-
 interface uart_if
   #(parameter
     DATA_WIDTH = 8) (         

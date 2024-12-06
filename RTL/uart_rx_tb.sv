@@ -7,7 +7,7 @@ module uart_rx_tb();
 	localparam BAUD_RATE  = 19200;
 	localparam CLK_FREQ   = 100_000_000;
 
-	uart_if #(DATA_WIDTH) rxif();
+	uart_if #(DATA_WIDTH) rxif(.*);
 	logic clk, rstn;
 	
 //clock generation
