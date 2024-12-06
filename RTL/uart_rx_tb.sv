@@ -4,7 +4,7 @@
 
 module uart_rx_tb();
 	localparam DATA_WIDTH = 8;
-	localparam BAUD_RATE  = 19200;
+	localparam BAUD_RATE  = 9600;
 	localparam CLK_FREQ   = 100_000_000;
 
 	uart_if #(DATA_WIDTH) rxif(.*);
