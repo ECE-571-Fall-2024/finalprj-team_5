@@ -1,0 +1,294 @@
+# Reading pref.tcl
+# //  Questa Sim-64
+# //  Version 2024.2 linux_x86_64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading project uartt
+# reading /pkgs/mentor/questa/2024.2/questasim/linux_x86_64/../modelsim.ini
+# Loading project uuart
+# Compile of uart.sv was successful.
+# Compile of uart_if.sv was successful.
+# Compile of uart_rx.sv was successful.
+# Compile of uart_rx_tb.sv was successful.
+# Compile of uart_tx.sv was successful.
+# Compile of uart_tx_tb.sv was successful.
+# 6 compiles, 0 failed with no errors.
+vsim -gui work.uart_rx_tb work.uart_tx_tb
+# vsim -gui work.uart_rx_tb work.uart_tx_tb 
+# Start time: 23:01:11 on Dec 05,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.uart_rx_tb(fast)
+# Loading work.uart_tx_tb(fast)
+run -all
+# Data Transmitted:  0, Data Received:  0
+# Data Transmitted:  1, Data Received:  1
+# Data Transmitted:  2, Data Received:  2
+# Data Transmitted:  3, Data Received:  3
+# Data Transmitted:  4, Data Received:  4
+# Data Transmitted:  5, Data Received:  5
+# Data Transmitted:  6, Data Received:  6
+# Data Transmitted:  7, Data Received:  7
+# Data Transmitted:  8, Data Received:  8
+# Data Transmitted:  9, Data Received:  9
+# Data Transmitted: 10, Data Received: 10
+# Data Transmitted: 11, Data Received: 11
+# Data Transmitted: 12, Data Received: 12
+# Data Transmitted: 13, Data Received: 13
+# Data Transmitted: 14, Data Received: 14
+# Data Transmitted: 15, Data Received: 15
+# Data Transmitted: 16, Data Received: 16
+# Data Transmitted: 17, Data Received: 17
+# Data Transmitted: 18, Data Received: 18
+# Data Transmitted: 19, Data Received: 19
+# Data Transmitted: 20, Data Received: 20
+# Data Transmitted: 21, Data Received: 21
+# Data Transmitted: 22, Data Received: 22
+# Data Transmitted: 23, Data Received: 23
+# Data Transmitted: 24, Data Received: 24
+# Data Transmitted: 25, Data Received: 25
+# Data Transmitted: 26, Data Received: 26
+# Data Transmitted: 27, Data Received: 27
+# Data Transmitted: 28, Data Received: 28
+# Data Transmitted: 29, Data Received: 29
+# Data Transmitted: 30, Data Received: 30
+# Data Transmitted: 31, Data Received: 31
+# Data Transmitted: 32, Data Received: 32
+# Data Transmitted: 33, Data Received: 33
+# Data Transmitted: 34, Data Received: 34
+# Data Transmitted: 35, Data Received: 35
+# Data Transmitted: 36, Data Received: 36
+# Data Transmitted: 37, Data Received: 37
+# Data Transmitted: 38, Data Received: 38
+# Data Transmitted: 39, Data Received: 39
+# Data Transmitted: 40, Data Received: 40
+# Data Transmitted: 41, Data Received: 41
+# Data Transmitted: 42, Data Received: 42
+# Data Transmitted: 43, Data Received: 43
+# Data Transmitted: 44, Data Received: 44
+# Data Transmitted: 45, Data Received: 45
+# Data Transmitted: 46, Data Received: 46
+# Data Transmitted: 47, Data Received: 47
+# Data Transmitted: 48, Data Received: 48
+# Data Transmitted: 49, Data Received: 49
+# Data Transmitted: 50, Data Received: 50
+# Data Transmitted: 51, Data Received: 51
+# Data Transmitted: 52, Data Received: 52
+# Data Transmitted: 53, Data Received: 53
+# Data Transmitted: 54, Data Received: 54
+# Data Transmitted: 55, Data Received: 55
+# Data Transmitted: 56, Data Received: 56
+# Data Transmitted: 57, Data Received: 57
+# Data Transmitted: 58, Data Received: 58
+# Data Transmitted: 59, Data Received: 59
+# Data Transmitted: 60, Data Received: 60
+# Data Transmitted: 61, Data Received: 61
+# Data Transmitted: 62, Data Received: 62
+# Data Transmitted: 63, Data Received: 63
+# Data Transmitted: 64, Data Received: 64
+# Data Transmitted: 65, Data Received: 65
+# Data Transmitted: 66, Data Received: 66
+# Data Transmitted: 67, Data Received: 67
+# Data Transmitted: 68, Data Received: 68
+# Data Transmitted: 69, Data Received: 69
+# Data Transmitted: 70, Data Received: 70
+# Data Transmitted: 71, Data Received: 71
+# Data Transmitted: 72, Data Received: 72
+# Data Transmitted: 73, Data Received: 73
+# Data Transmitted: 74, Data Received: 74
+# Data Transmitted: 75, Data Received: 75
+# Data Transmitted: 76, Data Received: 76
+# Data Transmitted: 77, Data Received: 77
+# Data Transmitted: 78, Data Received: 78
+# Data Transmitted: 79, Data Received: 79
+# Data Transmitted: 80, Data Received: 80
+# Data Transmitted: 81, Data Received: 81
+# Data Transmitted: 82, Data Received: 82
+# Data Transmitted: 83, Data Received: 83
+# Data Transmitted: 84, Data Received: 84
+# Data Transmitted: 85, Data Received: 85
+# Data Transmitted: 86, Data Received: 86
+# Data Transmitted: 87, Data Received: 87
+# Data Transmitted: 88, Data Received: 88
+# Data Transmitted: 89, Data Received: 89
+# Data Transmitted: 90, Data Received: 90
+# Data Transmitted: 91, Data Received: 91
+# Data Transmitted: 92, Data Received: 92
+# Data Transmitted: 93, Data Received: 93
+# Data Transmitted: 94, Data Received: 94
+# Data Transmitted: 95, Data Received: 95
+# Data Transmitted: 96, Data Received: 96
+# Data Transmitted: 97, Data Received: 97
+# Data Transmitted: 98, Data Received: 98
+# Data Transmitted: 99, Data Received: 99
+# Data Transmitted:100, Data Received:100
+# Data Transmitted:101, Data Received:101
+# Data Transmitted:102, Data Received:102
+# Data Transmitted:103, Data Received:103
+# Data Transmitted:104, Data Received:104
+# Data Transmitted:105, Data Received:105
+# Data Transmitted:106, Data Received:106
+# Data Transmitted:107, Data Received:107
+# Data Transmitted:108, Data Received:108
+# Data Transmitted:109, Data Received:109
+# Data Transmitted:110, Data Received:110
+# Data Transmitted:111, Data Received:111
+# Data Transmitted:112, Data Received:112
+# Data Transmitted:113, Data Received:113
+# Data Transmitted:114, Data Received:114
+# Data Transmitted:115, Data Received:115
+# Data Transmitted:116, Data Received:116
+# Data Transmitted:117, Data Received:117
+# Data Transmitted:118, Data Received:118
+# Data Transmitted:119, Data Received:119
+# Data Transmitted:120, Data Received:120
+# Data Transmitted:121, Data Received:121
+# Data Transmitted:122, Data Received:122
+# Data Transmitted:123, Data Received:123
+# Data Transmitted:124, Data Received:124
+# Data Transmitted:125, Data Received:125
+# Data Transmitted:126, Data Received:126
+# Data Transmitted:127, Data Received:127
+# Data Transmitted:128, Data Received:128
+# Data Transmitted:129, Data Received:129
+# Data Transmitted:130, Data Received:130
+# Data Transmitted:131, Data Received:131
+# Data Transmitted:132, Data Received:132
+# Data Transmitted:133, Data Received:133
+# Data Transmitted:134, Data Received:134
+# Data Transmitted:135, Data Received:135
+# Data Transmitted:136, Data Received:136
+# Data Transmitted:137, Data Received:137
+# Data Transmitted:138, Data Received:138
+# Data Transmitted:139, Data Received:139
+# Data Transmitted:140, Data Received:140
+# Data Transmitted:141, Data Received:141
+# Data Transmitted:142, Data Received:142
+# Data Transmitted:143, Data Received:143
+# Data Transmitted:144, Data Received:144
+# Data Transmitted:145, Data Received:145
+# Data Transmitted:146, Data Received:146
+# Data Transmitted:147, Data Received:147
+# Data Transmitted:148, Data Received:148
+# Data Transmitted:149, Data Received:149
+# Data Transmitted:150, Data Received:150
+# Data Transmitted:151, Data Received:151
+# Data Transmitted:152, Data Received:152
+# Data Transmitted:153, Data Received:153
+# Data Transmitted:154, Data Received:154
+# Data Transmitted:155, Data Received:155
+# Data Transmitted:156, Data Received:156
+# Data Transmitted:157, Data Received:157
+# Data Transmitted:158, Data Received:158
+# Data Transmitted:159, Data Received:159
+# Data Transmitted:160, Data Received:160
+# Data Transmitted:161, Data Received:161
+# Data Transmitted:162, Data Received:162
+# Data Transmitted:163, Data Received:163
+# Data Transmitted:164, Data Received:164
+# Data Transmitted:165, Data Received:165
+# Data Transmitted:166, Data Received:166
+# Data Transmitted:167, Data Received:167
+# Data Transmitted:168, Data Received:168
+# Data Transmitted:169, Data Received:169
+# Data Transmitted:170, Data Received:170
+# Data Transmitted:171, Data Received:171
+# Data Transmitted:172, Data Received:172
+# Data Transmitted:173, Data Received:173
+# Data Transmitted:174, Data Received:174
+# Data Transmitted:175, Data Received:175
+# Data Transmitted:176, Data Received:176
+# Data Transmitted:177, Data Received:177
+# Data Transmitted:178, Data Received:178
+# Data Transmitted:179, Data Received:179
+# Data Transmitted:180, Data Received:180
+# Data Transmitted:181, Data Received:181
+# Data Transmitted:182, Data Received:182
+# Data Transmitted:183, Data Received:183
+# Data Transmitted:184, Data Received:184
+# Data Transmitted:185, Data Received:185
+# Data Transmitted:186, Data Received:186
+# Data Transmitted:187, Data Received:187
+# Data Transmitted:188, Data Received:188
+# Data Transmitted:189, Data Received:189
+# Data Transmitted:190, Data Received:190
+# Data Transmitted:191, Data Received:191
+# Data Transmitted:192, Data Received:192
+# Data Transmitted:193, Data Received:193
+# Data Transmitted:194, Data Received:194
+# Data Transmitted:195, Data Received:195
+# Data Transmitted:196, Data Received:196
+# Data Transmitted:197, Data Received:197
+# Data Transmitted:198, Data Received:198
+# Data Transmitted:199, Data Received:199
+# Data Transmitted:200, Data Received:200
+# Data Transmitted:201, Data Received:201
+# Data Transmitted:202, Data Received:202
+# Data Transmitted:203, Data Received:203
+# Data Transmitted:204, Data Received:204
+# Data Transmitted:205, Data Received:205
+# Data Transmitted:206, Data Received:206
+# Data Transmitted:207, Data Received:207
+# Data Transmitted:208, Data Received:208
+# Data Transmitted:209, Data Received:209
+# Data Transmitted:210, Data Received:210
+# Data Transmitted:211, Data Received:211
+# Data Transmitted:212, Data Received:212
+# Data Transmitted:213, Data Received:213
+# Data Transmitted:214, Data Received:214
+# Data Transmitted:215, Data Received:215
+# Data Transmitted:216, Data Received:216
+# Data Transmitted:217, Data Received:217
+# Data Transmitted:218, Data Received:218
+# Data Transmitted:219, Data Received:219
+# Data Transmitted:220, Data Received:220
+# Data Transmitted:221, Data Received:221
+# Data Transmitted:222, Data Received:222
+# Data Transmitted:223, Data Received:223
+# Data Transmitted:224, Data Received:224
+# Data Transmitted:225, Data Received:225
+# Data Transmitted:226, Data Received:226
+# Data Transmitted:227, Data Received:227
+# Data Transmitted:228, Data Received:228
+# Data Transmitted:229, Data Received:229
+# Data Transmitted:230, Data Received:230
+# Data Transmitted:231, Data Received:231
+# Data Transmitted:232, Data Received:232
+# Data Transmitted:233, Data Received:233
+# Data Transmitted:234, Data Received:234
+# Data Transmitted:235, Data Received:235
+# Data Transmitted:236, Data Received:236
+# Data Transmitted:237, Data Received:237
+# Data Transmitted:238, Data Received:238
+# Data Transmitted:239, Data Received:239
+# Data Transmitted:240, Data Received:240
+# Data Transmitted:241, Data Received:241
+# Data Transmitted:242, Data Received:242
+# Data Transmitted:243, Data Received:243
+# Data Transmitted:244, Data Received:244
+# Data Transmitted:245, Data Received:245
+# Data Transmitted:246, Data Received:246
+# Data Transmitted:247, Data Received:247
+# Data Transmitted:248, Data Received:248
+# Data Transmitted:249, Data Received:249
+# Data Transmitted:250, Data Received:250
+# Data Transmitted:251, Data Received:251
+# Data Transmitted:252, Data Received:252
+# Data Transmitted:253, Data Received:253
+# Data Transmitted:254, Data Received:254
+# Data Transmitted:255, Data Received:255
+# Transmitted Data is matched with Received Data
+# ** Note: $finish    : /u/sakethk/ECE571-F24/finalprj-team_5/RTL/uart_rx_tb.sv(81)
+#    Time: 143368115 ns  Iteration: 1  Instance: /uart_rx_tb
+# 1
+# Break at /u/sakethk/ECE571-F24/finalprj-team_5/RTL/uart_rx_tb.sv line 81
