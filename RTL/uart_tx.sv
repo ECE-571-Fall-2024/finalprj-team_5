@@ -4,7 +4,7 @@ module uart_tx
   #(parameter
     // Configuration parameters for the UART transmitter
     DATA_WIDTH = 8,         // Data width (in bits) for transmission
-    BAUD_RATE  = 115200,    // Baud rate for the transmission
+    BAUD_RATE  = 9600,    // Baud rate for the transmission
     CLK_FREQ   = 100_000_000, // Clock frequency for the system
 
     // Local parameters calculated based on above parameters
